@@ -944,3 +944,30 @@
 
 </body>
 </html>
+<style>
+@keyframes mcLegSwing {
+  0%, 100% { transform: rotate(-22deg); }
+  50% { transform: rotate(22deg); }
+}
+
+@keyframes mcBob {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-3px); }
+}
+
+#mc-actor {
+  animation: mcBob 0.7s ease-in-out infinite;
+}
+
+#mc-actor .mc-leg-left {
+  animation: mcLegSwing 0.5s ease-in-out infinite;
+}
+
+#mc-actor .mc-leg-right {
+  animation: mcLegSwing 0.5s ease-in-out infinite reverse;
+}
+
+#mc-actor.facing-left {
+  transform: scaleX(-1);
+}
+</style>
